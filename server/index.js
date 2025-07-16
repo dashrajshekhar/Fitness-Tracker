@@ -1,7 +1,7 @@
 import express from "express";
-import * as dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
+import * as dotenv from "dotenv";
 import UserRoutes from "./routes/User.js";
 
 dotenv.config();
@@ -16,6 +16,7 @@ app.get("/", async (req, res) => {
     message: "Hello developers from Raj",
   });
 });
+
 
 app.use("/api/user/", UserRoutes);
 
